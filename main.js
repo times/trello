@@ -16,7 +16,7 @@ Trello.prototype.constructRequest = function(
     options,
     extraOption
 ) {
-    if (!(method === 'GET' || 'POST' || 'DELETE', 'PUT'))
+    if (!['GET', 'POST', 'DELETE', 'PUT'].includes(method))
         throw new Error(
             'Unsupported requestMethod. Pass one of these methods: POST, GET, PUT, DELETE.'
         );
@@ -90,7 +90,7 @@ function makeRequest(url, options, requestMethod) {
 }
 
 Trello.prototype.makeRequest = function(requestMethod, path, options) {
-    if (requestMethod !== 'PUT' || 'POST' || 'DELETE')
+    if (!['GET', 'POST', 'DELETE', 'PUT'].includes(method))
         throw new Error(
             'Unsupported requestMethod. Pass one of these methods: POST, GET, PUT, DELETE.'
         );
