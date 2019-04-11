@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554998222534" clover="3.2.0">
-  <project timestamp="1554998222535" name="All files">
-    <metrics statements="189" coveredstatements="78" conditionals="47" coveredconditionals="16" methods="54" coveredmethods="5" elements="290" coveredelements="99" complexity="0" loc="189" ncloc="189" packages="1" files="1" classes="1"/>
+<coverage generated="1555002161216" clover="3.2.0">
+  <project timestamp="1555002161216" name="All files">
+    <metrics statements="189" coveredstatements="80" conditionals="44" coveredconditionals="17" methods="54" coveredmethods="5" elements="287" coveredelements="102" complexity="0" loc="189" ncloc="189" packages="1" files="1" classes="1"/>
     <file name="main.js" path="/Users/akufour/Dev/Misc/trello/main.js">
-      <metrics statements="189" coveredstatements="78" conditionals="47" coveredconditionals="16" methods="54" coveredmethods="5"/>
+      <metrics statements="189" coveredstatements="80" conditionals="44" coveredconditionals="17" methods="54" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
@@ -39,10 +39,10 @@
       <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="83" count="0" type="stmt"/>
       <line num="92" count="1" type="stmt"/>
-      <line num="93" count="1" type="cond" truecount="2" falsecount="3"/>
+      <line num="93" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="94" count="1" type="stmt"/>
-      <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="99" count="0" type="stmt"/>
+      <line num="98" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="99" count="1" type="stmt"/>
       <line num="101" count="0" type="stmt"/>
       <line num="104" count="1" type="stmt"/>
       <line num="105" count="0" type="cond" truecount="0" falsecount="5"/>

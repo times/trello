@@ -7,7 +7,7 @@ describe('Trello', () => {
 
     const trello = new Trello('apiKey', 'apiToken');
 
-    describe('#createQuery()', () => {
+    describe('#trello.createQuery()', () => {
         it('should return the trello key and token', () => {
             expect(trello.createQuery()).toEqual({
                 key: 'apiKey',
@@ -16,7 +16,7 @@ describe('Trello', () => {
         });
     });
 
-    describe('#constructRequest()', () => {
+    describe('#trello.constructRequest()', () => {
         beforeEach(() => {
             jest.clearAllMocks();
         });
@@ -102,16 +102,24 @@ describe('Trello', () => {
         });
     });
 
-    describe('#makeRequest', () => {
+    describe('#trello.makeRequest()', () => {
         it('should throw an error when the ', () => {
             expect(() => {
-                trello.makeRequest('/path', 'GIT');
+                trello.makeRequest('GIT', '/path');
             }).toThrow(
                 new Error(
                     'Unsupported requestMethod. Pass one of these methods: POST, GET, PUT, DELETE.'
                 )
             );
         });
+
+        it('should error if options are not of type objects', () => {
+            expect(() => {
+                trello.makeRequest('GET', '/path', 'options');
+            }).toThrow(new Error('options should be an object'));
+        });
+
+        it('should call the function #makeRequest', () => {});
     });
 
     // describe('#handleMultipleParams', () => {
