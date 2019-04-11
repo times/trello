@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554995568077" clover="3.2.0">
-  <project timestamp="1554995568077" name="All files">
-    <metrics statements="189" coveredstatements="73" conditionals="47" coveredconditionals="11" methods="54" coveredmethods="4" elements="290" coveredelements="88" complexity="0" loc="189" ncloc="189" packages="1" files="1" classes="1"/>
+<coverage generated="1554998222534" clover="3.2.0">
+  <project timestamp="1554998222535" name="All files">
+    <metrics statements="189" coveredstatements="78" conditionals="47" coveredconditionals="16" methods="54" coveredmethods="5" elements="290" coveredelements="99" complexity="0" loc="189" ncloc="189" packages="1" files="1" classes="1"/>
     <file name="main.js" path="/Users/akufour/Dev/Misc/trello/main.js">
-      <metrics statements="189" coveredstatements="73" conditionals="47" coveredconditionals="11" methods="54" coveredmethods="4"/>
+      <metrics statements="189" coveredstatements="78" conditionals="47" coveredconditionals="16" methods="54" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
-      <line num="10" count="5" type="stmt"/>
+      <line num="10" count="7" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
-      <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="7" type="cond" truecount="2" falsecount="0"/>
       <line num="20" count="1" type="stmt"/>
-      <line num="24" count="4" type="stmt"/>
-      <line num="25" count="4" type="stmt"/>
-      <line num="27" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="6" type="stmt"/>
+      <line num="25" count="6" type="stmt"/>
+      <line num="27" count="6" type="cond" truecount="2" falsecount="0"/>
       <line num="28" count="3" type="stmt"/>
       <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -26,11 +26,11 @@
       <line num="42" count="1" type="stmt"/>
       <line num="43" count="2" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
-      <line num="51" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="51" count="3" type="cond" truecount="4" falsecount="0"/>
       <line num="52" count="1" type="stmt"/>
-      <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="66" count="0" type="stmt"/>
+      <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
       <line num="73" count="1" type="stmt"/>
       <line num="74" count="0" type="stmt"/>
       <line num="75" count="0" type="stmt"/>
@@ -39,8 +39,8 @@
       <line num="81" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="83" count="0" type="stmt"/>
       <line num="92" count="1" type="stmt"/>
-      <line num="93" count="0" type="cond" truecount="0" falsecount="5"/>
-      <line num="94" count="0" type="stmt"/>
+      <line num="93" count="1" type="cond" truecount="2" falsecount="3"/>
+      <line num="94" count="1" type="stmt"/>
       <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="99" count="0" type="stmt"/>
       <line num="101" count="0" type="stmt"/>

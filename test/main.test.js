@@ -73,5 +73,48 @@ describe('Trello', () => {
                 }
             );
         });
+
+        it('should return an object to handle an addWebhook request', () => {
+            expect(
+                trello.constructRequest('/1/webhooks/', 'POST', {
+                    description: 'webhook description',
+                    name: 'webhook',
+                })
+            ).toEqual({
+                url: `https://api.trello.com/1/tokens/apiToken/webhooks/`,
+                data: {
+                    key: 'apiKey',
+                    description: 'webhook description',
+                    name: 'webhook',
+                },
+                method: 'POST',
+            });
+        });
+
+        it('should return an object to handle a POST or PUT request', () => {
+            expect(
+                trello.constructRequest('/path', 'POST', { value: 'value' })
+            ).toEqual({
+                url: `https://api.trello.com/path`,
+                data: { value: 'value', key: 'apiKey', token: 'apiToken' },
+                method: 'POST',
+            });
+        });
     });
+
+    describe('#makeRequest', () => {
+        it('should throw an error when the ', () => {
+            expect(() => {
+                trello.makeRequest('/path', 'GIT');
+            }).toThrow(
+                new Error(
+                    'Unsupported requestMethod. Pass one of these methods: POST, GET, PUT, DELETE.'
+                )
+            );
+        });
+    });
+
+    // describe('#handleMultipleParams', () => {
+    //     it('should')
+    // })
 });
