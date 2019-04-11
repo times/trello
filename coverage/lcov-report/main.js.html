@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">29.69% </span>
+        <span class="strong">38.54% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>57/192</span>
+        <span class='fraction'>74/192</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">23.4% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/50</span>
+        <span class='fraction'>11/47</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">3.7% </span>
+        <span class="strong">7.41% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/54</span>
+        <span class='fraction'>4/54</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30.16% </span>
+        <span class="strong">38.62% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>57/189</span>
+        <span class='fraction'>73/189</span>
       </div>
     </div>
     <p class="quiet">
@@ -513,7 +513,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -522,40 +522,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -974,46 +974,46 @@ Trello.prototype.createQuery = function() {
     return { key: this.key, token: this.token };
 };
 &nbsp;
-Trello.prototype.constructRequest = <span class="fstat-no" title="function not covered" >fu</span>nction(
+Trello.prototype.constructRequest = function(
     path,
     method,
     options,
     extraOption
 ) {
-<span class="cstat-no" title="statement not covered" >    if (!(method === 'GET' || 'POST' || 'DELETE', 'PUT'))</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error(</span>
-            'Unsupported requestMethod. Pass one of these methods: POST, GET, PUT, DELETE.'
+    if (['GET', 'POST', 'DELETE', 'PUT'].indexOf(method) &lt; 0)
+        throw new Error(
+            'Unsupported method. Pass one of these methods: POST, GET, PUT, DELETE.'
         );
 &nbsp;
-    var query = <span class="cstat-no" title="statement not covered" >this.createQuery();</span>
-    var baseUrl = <span class="cstat-no" title="statement not covered" >'https://api.trello.com';</span>
+    var query = this.createQuery();
+    var baseUrl = 'https://api.trello.com';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (method === 'GET') {</span>
-        var queryString = <span class="cstat-no" title="statement not covered" >`?key=${query.key}&amp;token=${query.token}`;</span>
+    if (method === 'GET') {
+        var queryString = `?key=${query.key}&amp;token=${query.token}`;
 &nbsp;
         //pure GET function
-<span class="cstat-no" title="statement not covered" >        if (!options) <span class="cstat-no" title="statement not covered" >return { url: `${baseUrl}${path}${queryString}` };</span></span>
+        if (!options) return { url: `${baseUrl}${path}${queryString}` };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (Array.isArray(options))</span>
-<span class="cstat-no" title="statement not covered" >            return {</span>
+        if (Array.isArray(options))
+            return {
                 url: `${baseUrl}${path}${queryString}&amp;${extraOption}=${options.join(
                     ','
                 )}`,
             };
 &nbsp;
-        var keys = <span class="cstat-no" title="statement not covered" >Object.keys(options);</span>
-        var values = <span class="cstat-no" title="statement not covered" >Object.values(options);</span>
-        var additionalQueries = <span class="cstat-no" title="statement not covered" >keys</span>
-            .map(<span class="fstat-no" title="function not covered" >(k</span>ey, index) =&gt; <span class="cstat-no" title="statement not covered" >`&amp;${key}=${values[index]}`)</span>
+        var keys = Object.keys(options);
+        var values = Object.values(options);
+        var additionalQueries = keys
+            .map((key, index) =&gt; `&amp;${key}=${values[index]}`)
             .join('');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        return {</span>
+        return {
             url: `${baseUrl}${path}${queryString}${additionalQueries}`,
         };
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (path.includes('webhook') &amp;&amp; method === 'DELETE')</span>
-<span class="cstat-no" title="statement not covered" >        return {</span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (path.includes('webhook') &amp;&amp; method === 'DELETE')
+        return {
             url: `${baseUrl}${path}`,
             data: { ...query },
             method,
@@ -1426,7 +1426,7 @@ module.exports = Trello;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 11 2019 13:07:30 GMT+0100 (BST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 11 2019 16:12:48 GMT+0100 (BST)
 </div>
 </div>
 <script src="prettify.js"></script>
