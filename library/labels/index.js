@@ -2,7 +2,7 @@ const {
   constructRequest,
   handleMultipleParams,
   makeRequest,
-  checkParams
+  checkParams,
 } = require("../helpers");
 
 const updateLabel = (key, token, labelId, extraParams) => {
@@ -33,5 +33,5 @@ const deleteLabel = (key, token, labelId) => {
 
 module.exports = {
   updateLabel,
-  deleteLabel
+  deleteLabel,
 };

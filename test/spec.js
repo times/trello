@@ -1,19 +1,11 @@
 const chai = require("chai");
-const sinon = require("sinon");
 const sinonChai = require("sinon-chai");
-const sinonStubPromise = require("sinon-stub-promise");
 const fetchMock = require("fetch-mock");
 
 chai.should();
 chai.use(sinonChai);
 
 const Trello = require("../main");
-const {
-  constructRequest,
-  handleMultipleParams,
-  makeRequest,
-  checkParams,
-} = require("../library/helpers");
 
 describe("Trello", () => {
   let trello;
@@ -57,25 +49,25 @@ describe("Trello", () => {
       ).to.not.throw(Error);
     });
 
-    it("should not throw error if a method passed is POST", async () => {
+    it("should not throw error if method passed is POST", async () => {
       expect(
         trello.makeRequest.bind(trello, "POST", "/somePath", {})
       ).to.not.throw(Error);
     });
 
-    it("should not throw error if a method passed is GET", () => {
+    it("should not throw error if method passed is GET", () => {
       expect(
         trello.makeRequest.bind(trello, "GET", "/somePath", {})
       ).to.not.throw(Error);
     });
 
-    it("should not throw error if a method passed is PUT", () => {
+    it("should not throw error if method passed is PUT", () => {
       expect(
         trello.makeRequest.bind(trello, "PUT", "/somePath", {})
       ).to.not.throw(Error);
     });
 
-    it("should not throw error if a method passed is DELETE", () => {
+    it("should not throw error if method passed is DELETE", () => {
       expect(
         trello.makeRequest.bind(trello, "DELETE", "/somePath", {})
       ).to.not.throw(Error);
@@ -90,19 +82,6 @@ describe("Trello", () => {
         expect(options.webhooks, true);
       });
     });
-
-    // it("should error if unable to to make request", () => {
-    //   //
-    //   expect(
-    //     trello.makeRequest.bind(
-    //       trello,
-    //       "DELETE",
-    //       "https://www.example.com/somePath",
-    //       {}
-    //     )
-    //   ).to.throw(Error);
-
-    // });
   });
 
   describe("/1/boards", () => {

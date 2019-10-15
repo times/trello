@@ -2,7 +2,7 @@ const {
   constructRequest,
   handleMultipleParams,
   makeRequest,
-  checkParams
+  checkParams,
 } = require("../helpers");
 
 const addItemToChecklist = (key, token, checkListId, name, position) => {

@@ -29,15 +29,13 @@ const constructPostRequest = (method, baseUrl, path, key, token, options) => {
   const isWebhook = path.includes("webhook");
   const data = isWebhook ? { key, ...options } : { key, ...options, token };
 
-  if (isWebhook) {
-    return {
-      url: isWebhook
-        ? `https://api.trello.com/1/tokens/${token}/webhooks/`
-        : `${baseUrl}${path}`,
-      method,
-      data,
-    };
-  }
+  return {
+    url: isWebhook
+      ? `https://api.trello.com/1/tokens/${token}/webhooks/`
+      : `${baseUrl}${path}`,
+    method,
+    data,
+  };
 };
 
 const constructGetDeleteRequest = (
@@ -118,12 +116,13 @@ const handleMakeRequest = (key, token, url, requestMethod, options) => {
   return makeRequest(requestData.url, requestData.method, requestData.data);
 };
 
-const makeRequest = (url, method, options) => {
-  if (method === "GET" || "DELETE") return fetch(url);
-
-  if (!options) return fetch(url, { method });
-
-  return fetch(url, {
+const makeRequest = async (url, method, options) => {
+  console.log(1);
+  if (method === "GET" || "DELETE") return await fetch(url);
+  console.log(2);
+  if (!options) return await fetch(url, { method });
+  console.log(3);
+  return await fetch(url, {
     method,
     headers: {
       "Content-Type": "application/json",
