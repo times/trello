@@ -2,26 +2,31 @@ const {
   constructRequest,
   handleMultipleParams,
   makeRequest,
-} = require('../helpers');
+  checkParams,
+} = require("../helpers");
 
-const getOrgBoards = (organizationId, key, token) => {
+const getOrgBoards = (key, token, organizationId) => {
+  checkParams([organizationId]);
+
   const request = constructRequest(
     `/1/organizations/${organizationId}/boards`,
-    'GET',
+    "GET",
     key,
     token
   );
-  return makeRequest(request.url);
+  return makeRequest(request.url, request.method);
 };
 
-const getOrgMembers = (organizationId, key, token) => {
+const getOrgMembers = (key, token, organizationId) => {
+  checkParams([organizationId]);
+
   const request = constructRequest(
     `/1/organizations/${organizationId}/members`,
-    'GET',
+    "GET",
     key,
     token
   );
-  return makeRequest(request.url);
+  return makeRequest(request.url, request.method);
 };
 
 module.exports = { getOrgBoards, getOrgMembers };

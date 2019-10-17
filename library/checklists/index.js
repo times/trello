@@ -2,31 +2,35 @@ const {
   constructRequest,
   handleMultipleParams,
   makeRequest,
-} = require('../helpers');
+  checkParams,
+} = require("../helpers");
 
-const addItemToChecklist = (checkListId, name, position, key, token) => {
+const addItemToChecklist = (key, token, checkListId, name, position) => {
+  checkParams([checkListId, name, position]);
   const request = constructRequest(
     `/1/checklists/${checkListId}/checkitems`,
-    'POST',
+    "POST",
     key,
     token,
-    { name, position: pos }
+    { name, pos: position }
   );
 
-  return makeRequest(request.url, request.data, request.method);
+  return makeRequest(request.url, request.method, request.data);
 };
 
-const updateChecklist = (checklistId, extraParams, key, token) => {
+const updateChecklist = (key, token, checkListId, extraParams) => {
+  checkParams([checkListId, extraParams]);
+
   const params = handleMultipleParams({}, extraParams);
   const request = constructRequest(
-    `/1/checklists/${checklistId}`,
-    'PUT',
+    `/1/checklists/${checkListId}`,
+    "PUT",
     key,
     token,
     params
   );
 
-  return makeRequest(request.url, request.data, request.method);
+  return makeRequest(request.url, request.method, request.data);
 };
 
 module.exports = { addItemToChecklist, updateChecklist };
